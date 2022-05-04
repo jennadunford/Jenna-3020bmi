@@ -21,7 +21,7 @@ double weight2kg(int stones, int pounds, int ounces)
 
 double height2metres(int feet, int inches)
 {
-    return(feet/3.82);
+    return(feet*3.28);//Changed divide to multiply, changed value to 3.28
 }
 
 char categorise(double kg, double metre)
@@ -30,9 +30,9 @@ char categorise(double kg, double metre)
     char cat;
     if (bmi<19)
         cat='A';
-    else if (bmi<=26)
+    else if (bmi<=25)//This value was incorrect, changed
         cat='B';
-    else if (bmi<=300)
+    else if (bmi<=30)//This value was incorrect, changed
         cat='C';
     else
         cat='D';
