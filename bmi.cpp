@@ -4,6 +4,11 @@
 
 using namespace std;
 
+int inches2feet(int x)
+{
+	return(x*12);
+}
+
 int ounces2pounds(int x)
 {
     return(x*16);
@@ -16,12 +21,12 @@ int stones2pounds(int x)
 
 double weight2kg(int stones, int pounds, int ounces)
 {
-    return (stones2pounds(stones)+pounds+ounces2pounds(ounces))/2.2;
+    return (stones2pounds(stones)+pounds+ounces2pounds(ounces))*2.2;//Changed divide to multiply
 }
 
 double height2metres(int feet, int inches)
 {
-    return(feet*3.28);//Changed divide to multiply, changed value to 3.28
+    return((feet*3.28)+(inches2feet(inches)*3.28));//Changed divide to multiply, changed value to 3.28
 }
 
 char categorise(double kg, double metre)
