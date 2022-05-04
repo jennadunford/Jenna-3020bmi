@@ -26,12 +26,13 @@ double weight2kg(int stones, int pounds, int ounces)
 
 double height2metres(int feet, int inches)
 {
-    return(((feet)+(inches2feet(inches)))/3.28);//Changed all to divide
+    return(feet + inches2feet(inches))/3.28;//Tried to neaten this calculation
 }
 
 //Changed all function variables to doubles
 char categorise(double kg, double metre)
 {
+	cout <<  "Kg : " << kg << " Metres: " << metre << endl;
     double bmi = (kg)/(metre*metre); //Changed this calculation
 	cout << "calculated bmi: " << bmi << endl; //Added output log to check values
     char cat;
