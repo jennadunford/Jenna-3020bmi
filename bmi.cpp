@@ -16,7 +16,7 @@ double ounces2pounds(int x)
 
 double stones2pounds(int x)
 {
-    return(x*14);//This needs to be multiploed
+    return(x*14);//This needs to be multiplied
 }
 
 double weight2kg(int stones, int pounds, int ounces)
@@ -60,7 +60,7 @@ void process_data(char* input_file, char* output_file)
     f_out.open(output_file,ofstream::out);
     while (!f_in.eof())
     {
-    	f_in >> person_id >> pounds >> stones >> ounces >> feet >> inches;
+    	f_in >> person_id >> stones >> pounds >> ounces >> feet >> inches;//Stones and pounds were in incorrect places
         kg=weight2kg(int(stones),int(pounds),int(ounces));
         m =height2metres(int(feet),int(inches));
         cat=categorise(kg,m);
