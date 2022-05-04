@@ -32,7 +32,7 @@ double height2metres(int feet, int inches)
 //Changed all function variables to doubles
 char categorise(double kg, double metre)
 {
-    double bmi = kg*kg/metre;
+    double bmi = (kg*kg)/metre; //Changed this calculation
     char cat;
     if (bmi<19)
         cat='A';
