@@ -1,5 +1,13 @@
 #Jenna Dunford
 # Description for Lab Test
+JENNA FOUND A POSSIBLE ISSUE
+I manually calculated the BMI of the first person.
+The manually calculated BMI was 14.46.
+I also managed to get this result in the code.
+HOWEVER, this does not fit into the B range, which was the expectation, it is in the A range.
+Do not know why this is.
+
+
 
 This code takes as input a data file with the weight and height of individuals and computes the body mass index (BMI). The BMI of a person is the weight of a person in kilograms divided by the square of the height in metres. The program should then categorise the BMI according to these rules
 * Less than 19: A
