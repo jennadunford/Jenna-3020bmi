@@ -4,17 +4,17 @@
 
 using namespace std;
 
-int inches2feet(int x)
+double inches2feet(int x)
 {
 	return(x/12);
 }
 
-int ounces2pounds(int x)
+double ounces2pounds(int x)
 {
     return(x/16);
 }
 
-int stones2pounds(int x)
+double stones2pounds(int x)
 {
     return(x/14);
 }
@@ -29,6 +29,7 @@ double height2metres(int feet, int inches)
     return(((feet)+(inches2feet(inches)))/3.28);//Changed all to divide
 }
 
+//Changed all function variables to doubles
 char categorise(double kg, double metre)
 {
     double bmi = kg*kg/metre;
