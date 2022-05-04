@@ -32,7 +32,7 @@ double height2metres(int feet, int inches)
 //Changed all function variables to doubles
 char categorise(double kg, double metre)
 {
-    double bmi = (kg*kg)/metre; //Changed this calculation
+    double bmi = (kg)/(metre*metre); //Changed this calculation
 	cout << "calculated bmi: " << bmi << endl; //Added output log to check values
     char cat;
     if (bmi<19)
