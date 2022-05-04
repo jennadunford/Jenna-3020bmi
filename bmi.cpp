@@ -4,11 +4,6 @@
 
 using namespace std;
 
-double inches2feet(int x)
-{
-	return(x/12);
-}
-
 double ounces2pounds(int x)
 {
     return(x/16);
@@ -26,7 +21,7 @@ double weight2kg(int stones, int pounds, int ounces)
 
 double height2metres(int feet, int inches)
 {
-    return(feet + inches2feet(inches))/3.28;//Tried to neaten this calculation
+    return(feet + (inches/12))/3.28;//Tried to neaten this calculation
 }
 
 //Changed all function variables to doubles
@@ -62,6 +57,7 @@ void process_data(char* input_file, char* output_file)
     while (!f_in.eof())
     {
     	f_in >> person_id >> stones >> pounds >> ounces >> feet >> inches;//Stones and pounds were in incorrect places
+	cout << "Inches: " << inches << endl;
         kg=weight2kg(int(stones),int(pounds),int(ounces));
         m =height2metres(int(feet),int(inches));
         cat=categorise(kg,m);
