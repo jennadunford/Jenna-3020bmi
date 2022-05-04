@@ -57,6 +57,7 @@ void process_data(char* input_file, char* output_file)
         kg=weight2kg(int(stones),int(pounds),int(ounces));
         m =height2metres(int(feet),int(inches));
         cat=categorise(kg,m);
+	if(f_in.eof()){break;}
 	f_out << person_id << " " << cat << endl;
     }
     f_in.close();
