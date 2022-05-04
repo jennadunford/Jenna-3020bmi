@@ -26,7 +26,7 @@ double weight2kg(int stones, int pounds, int ounces)
 
 double height2metres(int feet, int inches)
 {
-    return((feet)+(inches2feet(inches))/3.28);//Changed all to divide
+    return(((feet)+(inches2feet(inches)))/3.28);//Changed all to divide
 }
 
 char categorise(double kg, double metre)
