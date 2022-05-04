@@ -19,9 +19,9 @@ double weight2kg(int stones, int pounds, int ounces)
     return (stones2pounds(stones)+pounds+ounces2pounds(ounces))/2.2;
 }
 
-double height2metres(int feet, int inches)
+double height2metres(int feet, double inches)
 {
-    return(feet + (inches/12))/3.28;//Tried to neaten this calculation
+    return(feet/3.28)+((inches/12)/3.28);//Tried to neaten this calculation
 }
 
 //Changed all function variables to doubles
@@ -48,7 +48,8 @@ void process_data(char* input_file, char* output_file)
     ofstream f_out;
     string data;
     string person_id;
-    int pounds, stones, ounces, feet, inches;
+    int pounds, stones, ounces, feet;
+    double inches;
     double kg, m;
     char cat;
 
@@ -59,7 +60,7 @@ void process_data(char* input_file, char* output_file)
     	f_in >> person_id >> stones >> pounds >> ounces >> feet >> inches;//Stones and pounds were in incorrect places
 	cout << "Inches: " << inches << endl;
         kg=weight2kg(int(stones),int(pounds),int(ounces));
-        m =height2metres(int(feet),int(inches));
+        m =height2metres(int(feet),double(inches));
         cat=categorise(kg,m);
 	if(f_in.eof()){break;}
 	f_out << person_id << " " << cat << endl;
